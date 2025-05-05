@@ -1,0 +1,28 @@
+### To read data
+
+GET http://localhost:4004/odata/v4/employeeservice/Employee
+
+###To create data
+
+POST http://localhost:4004/odata/v4/employeeservice/Employee
+Content-Type: application/json
+
+{ 
+      "name": "Devi",
+      "address": "Banglore",
+      "department": "EEE",
+      "email": "devi@gmail.com"
+       }
+
+### to update data
+
+PATCH http://localhost:4004/odata/v4/employeeservice/Employee(name='Devi', ID='0bb058b5-c994-49b9-abab-0e5d31378a00')
+Content-Type: application/json
+
+{
+   "email": "Shyam@gmail.com"  
+}
+ 
+### to delete data
+
+DELETE http://localhost:4004/odata/v4/employeeservice/Employee(name='Devi', ID='0bb058b5-c994-49b9-abab-0e5d31378a00')
